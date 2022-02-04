@@ -1,24 +1,48 @@
-# README
+# Ruby on Rails - Contact List
+Create a Contact List with the following conditions:
+- Attributes:
+  - User
+    - name - unique and mandatory
+    - age
+    - biography
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  - Contact:
+    - name - unique and mandatory
+    - birthdate
 
-Things you may want to cover:
+  - Telephone:
+    - number - unique and mandatory
+    - category - mandatory
+    - principal
 
-* Ruby version
+- Associations:
+  - User:
+    - has many unique Contacts
+  - Contact:
+    - has many unique Telephones
 
-* System dependencies
+## Instalation
 
-* Configuration
+### You will need
+- RVM
+- Ruby 3.1.0
+- Rails 6.1.4.4
+- rspec-rails
 
-* Database creation
+#### Install RVM, following [Official Website](https://rvm.io/rvm/install) instructions.
 
-* Database initialization
+#### Install Ruby 3.1.0:
+```
+rvm install 3.1.0
+```
 
-* How to run the test suite
+#### Install Bundler:
+```
+gem install bundler
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Install Rails following [Official Website](https://guides.rubyonrails.org/v6.1.4.4/getting_started.html#creating-a-new-rails-project-installing-rails)
 
-* Deployment instructions
-
-* ...
+#### Install rspec-rails
+The rspec-rails gem is already in Gemfile.
+So just run `bundle install`

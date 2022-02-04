@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+fulano:
+  name: MyString
+  birthdate: 2022-02-03
+  user: Joao
+
+ciclano:
+  name: MyString
+  birthdate: 2022-02-03
+  user: Kleber
