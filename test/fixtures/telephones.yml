@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+home:
   number: MyString
   category: MyString
   principal: false
-  contact: one
+  contact: fulano
 
-two:
+work:
   number: MyString
   category: MyString
   principal: false
-  contact: two
+  contact: ciclano

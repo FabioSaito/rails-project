@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+fulano:
   name: MyString
   birthdate: 2022-02-03
-  user: one
+  user: Joao
 
-two:
+ciclano:
   name: MyString
   birthdate: 2022-02-03
-  user: two
+  user: Kleber
