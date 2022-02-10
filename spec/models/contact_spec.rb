@@ -3,14 +3,16 @@ require "rails_helper"
 RSpec.describe Contact, type: :model do
   context "requisites" do
     let!(:base_user) {
-      User.create(
+      User.create!(
         name: "Joao",
         age: 25,
         biography: "Long text with a lot of words."
       )
     }
+    # usar operador bang -> !
+    # usar fixtures 
     subject! {
-      User.first.contacts.create(
+      User.first.contacts.create!(
         name: "Carlos",
         birthdate: "2022-01-10"
       )
@@ -45,6 +47,5 @@ RSpec.describe Contact, type: :model do
       )
       expect(User.second.contacts.new(duplicate_contact).save).to be true
     end
-    
   end
 end
