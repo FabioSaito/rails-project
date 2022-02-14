@@ -2,13 +2,13 @@ require "rails_helper"
 
 RSpec.describe Contact, type: :model do
   context "requisites" do
-    let!(:base_user) {
-      User.create!(
-        name: "Joao",
-        age: 25,
-        biography: "Long text with a lot of words."
-      )
-    }
+    # let!(:base_user) {
+    #   User.create!(
+    #     name: "Joao",
+    #     age: 25,
+    #     biography: "Long text with a lot of words."
+    #   )
+    # }
     # usar operador bang -> !
     # usar fixtures 
     subject! {

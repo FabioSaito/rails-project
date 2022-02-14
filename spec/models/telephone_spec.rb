@@ -1,18 +1,33 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Telephone, type: :model do
-  # inclusion of
+  fixtures :telephones
 
-  # context "create new" do
-  #   it "should not increment a new telephone to table" do
-  #      expect(Telephone.new.save).to be false
-  #   end
+  describe "change principal phone" do
+    it "should change principal phone" do
+      expect_change = {
+        before_new_principal: true,
+        after_new_principal: false,
+        new_principal: true
+      }
 
-  #   it "should increment a new telephone to table" do
-  #     User.create
-  #     User.first.contacts.create
-  #     expect( Contact.first.telephones.new.save).to be true
-  #   end
-  # end
+      test_change = {
+        before_new_principal: false,
+        after_new_principal: false,
+        new_principal: false  
+      }
+      
+      tel_new = {
+        number: "8888-8888",
+        category: "home",
+        principal: true
+      }
 
+      test_change[:before_new_principal] = Telephone.find(telephones(:tel1).id).principal
+      new_principal_tel = Contact.first.telephones.create(tel_new)
+      test_change[:after_new_principal] = Telephone.find(telephones(:tel1).id).principal
+      test_change[:new_principal] = new_principal_tel.principal
+      expect(test_change).to eq(expect_change)
+    end
+  end
 end

@@ -41,9 +41,3 @@ tel7:
   category: home
   principal: false
   contact: contact2
-
-new-tel:
-  number: "8888-8888"
-  category: home
-  principal: true
-  contact: contact1
