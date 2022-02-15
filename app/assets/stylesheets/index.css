@@ -1,0 +1,72 @@
+:root {
+  /* Colors */
+  --light-yellow: #ffe21d;
+  --dark-yellow: #ffd21d;
+  --light-blue: #24afff;
+  --dark-blue: #248bff;
+  --salmon: #f26c6c;
+  --green: #27b667;
+  --off-white: #f8f8ff;
+  --off-grey: #edeef3;
+  --red-error: #ede1e5;
+  --red-text-error: #f17b78;
+  --green-success: #dae7e5;
+  --green-text-success: #6ac391;
+  --yellow-warning: #eae7dc;
+  --yellow-text-warning: #e6b64c;
+  --black: #000000;
+  --white: #ffffff;
+
+/* Fonts */
+  --default-font: 'Montserrat', sans-serif;
+  --title-font-size: 30px;
+  --text-font-size: 16px;
+
+
+/* Spaces */
+  --space-unit: 15px;
+
+  --space-default: calc(0.5 * var(--space-unit));
+
+  --space-small: var(--space-default);
+  --space-medium: calc(2 * var(--space-default));
+  --space-large: calc(4 * var(--space-default));
+  --space-xlarge: calc(8 * var(--space-default));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+figure,
+table,
+th,
+td,
+caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
