@@ -13,5 +13,5 @@
  *= require_tree .
  *= require_self
  */
-@import '/app/assets/stylesheets/index.css';
-@import '/app/assets/stylesheets/users.scss';
+@use '/app/assets/stylesheets/index.css';
+@use '/app/assets/stylesheets/users.scss';

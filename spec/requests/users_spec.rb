@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Users", type: :request do
   describe "GET /index" do
     it "returns http success" do
-      get "/users/index"
+      get "/users"
       expect(response).to have_http_status(:success)
     end
   end
@@ -22,9 +22,9 @@ RSpec.describe "Users", type: :request do
     end
   end
 
-  describe "GET /create" do
+  describe "POST /create" do
     it "returns http success" do
-      get "/users/create"
+      post "/users/create"
       expect(response).to have_http_status(:success)
     end
   end
@@ -36,9 +36,9 @@ RSpec.describe "Users", type: :request do
     end
   end
 
-  describe "GET /update" do
+  describe "PUT /update" do
     it "returns http success" do
-      get "/users/update"
+      put "/users/update"
       expect(response).to have_http_status(:success)
     end
   end
