@@ -21,6 +21,14 @@
   --default-font: 'Montserrat', sans-serif;
   --title-font-size: 30px;
   --text-font-size: 16px;
+  --font-size-1: 12px;
+  --font-size-2: 18px;
+  --font-size-3: 24px;
+  --font-size-4: 30px;
+  --font-size-5: 36px;
+  --font-size-6: 42px;
+  --font-size-7: 48px;
+
 
 
 /* Spaces */
@@ -69,4 +77,8 @@ hr {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }

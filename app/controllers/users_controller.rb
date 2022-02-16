@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    @contacts = @user.contacts.all
   end
 
   def new
@@ -21,4 +23,4 @@ class UsersController < ApplicationController
   def destroy
   end
 end
-# 
+

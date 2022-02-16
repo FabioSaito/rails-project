@@ -1,2 +1,59 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="hero__image">
+  <div class="container__users">
+    <div class="element__users__show card__user">
+
+      <div class="user_data">
+        <div class="basic__information">
+          <div class="text__card__users text__card__info">
+            <span>
+              <%= @user.name %>
+            </span>
+            <span>
+              <%= @user.age %> anos
+            </span>
+          </div>
+
+          <div class="container__card__bio">
+            <p class="text__card__users text__card__bio"> Bio: </p>
+            <p class="text__card__users text__card__bio__description">
+              <%= @user.biography %>
+            </p>
+          </div>
+        </div>
+
+        <div class="text__card__users user__relationship">
+          <p class="contact__card__header">
+            <%= @user.contacts.count %> Contatos
+          </p>
+          <ul class="container__contact__card">
+            <% @contacts.each do |contact| %>
+              <li class="card__user contact__telephone__card">
+                <div class="contact__telephone__header">
+                  <p><%= contact.name %></p>
+                  <p><%= contact.birthdate.strftime("%d / %m / %Y") %></p>
+                </div>
+                <div class="contact__telephone__body">
+                  <% contact.telephones.each do |telephone| %>
+                    <div class="telephone_info">
+                      <div class="telephone-number">
+                        <%= telephone.number %>
+                      </div>
+                      <div class="telephone-category">
+                        <%= telephone.category %>
+                      </div>
+                      <div class="telephone-principal">
+                        <% if telephone.principal  %>
+                        <span> Principal </span>                        
+                        <% end %>    
+                      </div>
+                    </div>
+                    <% end %>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

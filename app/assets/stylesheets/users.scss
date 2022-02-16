@@ -3,12 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 //
 .hero__image {
-  // background-image: linear-gradient(
-  //   to bottom right,
-  //   rgba(102, 159, 192, 0.8),
-  //   rgba(141, 118, 170, 0.4),
-  //   rgba(141, 118, 170, 0.4));
-
   background-image: linear-gradient(
       to bottom right,
       rgba(102, 159, 192, 0.95),
@@ -30,42 +24,45 @@
   font-family: var(--default-font);
 }
 
-.ul__users {
+.container__users {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  height: 100%;
 }
 
-.li__users {
-  margin: var(--space-medium);
-  padding: var(--space-medium);
-  border-radius: 15px;
+.element__users {
   width: 300px;
   min-height: 90px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-  background-color: rgba($color: rgb(0, 0, 0), $alpha: 0.5);
 }
 
-.text__li__users {
+.card__user {
+  border-radius: 15px;
+  padding: var(--space-medium);
+  background-color: rgba($color: rgb(0, 0, 0), $alpha: 0.5);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.text__card__users {
   color: var(--white);
   font-weight: 400;
   text-decoration: none;
   position: relative;
 }
 
-.bio__text {
+.bio__card__text {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-bottom: var(--space-small);
 }
+
 .user__relationship {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-top: 2px solid black;
   padding-top: var(--space-small);
-  // align-items: stretch;
 }

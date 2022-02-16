@@ -1,0 +1,89 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+//
+.user_data {
+  display: flex;
+  flex-direction: column;
+}
+
+.basic__information {
+  display: flex;
+  flex-direction: column;
+}
+
+.text__card__info {
+  font-size: var(--font-size-4);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: var(--space-small);
+  border-bottom: 2px solid var(--black);
+}
+
+.container__card__bio {
+  padding: var(--space-small) 0;
+}
+
+.text__card__bio {
+  font-size: var(--font-size-3);
+}
+
+.text__card__bio__description {
+  padding-left: var(--space-small);
+}
+
+.element__users__show {
+  width: 500px;
+}
+
+.user__relationship {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__contact__card {
+  width: 100%;
+}
+
+.contact__card__header {
+  font-size: var(--font-size-3);
+}
+
+.contact__telephone__card {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--space-small) 0;
+  width: 100%;
+}
+
+.contact__telephone__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__telephone__body {
+  flex: 1;
+  margin-left: var(--space-medium);
+  padding-left: var(--space-medium);
+  border-left: 2px solid white;
+}
+
+.telephone_info {
+  display: grid;
+  grid-template-areas: "telephone-number", "telephone-category", "telephone-principal";
+  grid-template-columns: 5fr 3fr 3fr;
+  grid-template-areas: "telephone-number telephone-category telephone-principal";
+}
+
+.telephone_info .telephone-number {
+  grid-area: telephone-number;
+}
+.telephone_info .telephone-category {
+  grid-area: telephone-category;
+}
+.telephone_info .telephone-principal {
+  grid-area: telephone-principal;
+}
