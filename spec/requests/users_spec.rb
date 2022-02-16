@@ -4,7 +4,7 @@ RSpec.describe "Users", type: :request do
   describe "GET /index" do
     it "returns http success" do
       get "/users"
-      assert_equal User.all, assigns(:users)
+      expect(assigns(:users)).to eq(User.all)
       expect(response).to have_http_status(:success)
     end
   end
