@@ -1,0 +1,71 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+//
+.hero__image {
+  // background-image: linear-gradient(
+  //   to bottom right,
+  //   rgba(102, 159, 192, 0.8),
+  //   rgba(141, 118, 170, 0.4),
+  //   rgba(141, 118, 170, 0.4));
+
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(102, 159, 192, 0.95),
+      rgba(141, 118, 170, 0.8),
+      rgba(141, 118, 170, 0.8)
+    ),
+    url("rails_hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-large) var(--space-xlarge);
+  font-family: var(--default-font);
+}
+
+.ul__users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.li__users {
+  margin: var(--space-medium);
+  padding: var(--space-medium);
+  border-radius: 15px;
+  width: 300px;
+  min-height: 90px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  background-color: rgba($color: rgb(0, 0, 0), $alpha: 0.5);
+}
+
+.text__li__users {
+  color: var(--white);
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+}
+
+.bio__text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: var(--space-small);
+}
+.user__relationship {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 2px solid black;
+  padding-top: var(--space-small);
+  // align-items: stretch;
+}
