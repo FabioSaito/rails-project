@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'net-smtp', require: false
 
 gem 'rubocop', require: false
+
+gem 'rails-controller-testing'
