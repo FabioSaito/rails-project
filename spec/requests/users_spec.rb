@@ -13,8 +13,12 @@ RSpec.describe "Users", type: :request do
   describe "GET /show" do
     it "returns http success" do
       get user_path(users(:user1).id)
-      expect(assigns(:user)).to eq(users(:user1))
       expect(response).to have_http_status(:success)
+    end
+    
+    it "returns correct user" do
+      get user_path(users(:user1).id)
+      expect(assigns(:user)).to eq(users(:user1))
     end
   end
 
