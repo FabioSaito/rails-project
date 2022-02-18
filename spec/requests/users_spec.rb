@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe "Users", type: :request do
+  fixtures :users
   describe "GET /index" do
     it "returns http success" do
-      get "/users"
+      get users_path
       expect(assigns(:users)).to eq(User.all)
       expect(response).to have_http_status(:success)
     end
@@ -11,8 +12,13 @@ RSpec.describe "Users", type: :request do
 
   describe "GET /show" do
     it "returns http success" do
-      get "/users/show"
+      get user_path(users(:user1).id)
       expect(response).to have_http_status(:success)
+    end
+    
+    it "returns correct user" do
+      get user_path(users(:user1).id)
+      expect(assigns(:user)).to eq(users(:user1))
     end
   end
 
@@ -26,6 +32,7 @@ RSpec.describe "Users", type: :request do
   describe "POST /create" do
     it "returns http success" do
       post "/users/create"
+      
       expect(response).to have_http_status(:success)
     end
   end

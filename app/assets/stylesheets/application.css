@@ -15,3 +15,4 @@
  */
 @use '/app/assets/stylesheets/index.css';
 @use '/app/assets/stylesheets/users.scss';
+@use '/app/assets/stylesheets/users_show.scss';

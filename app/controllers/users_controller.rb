@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.includes(:contacts, :telephones).all
   end
 
   def show
+    @user = User.includes(:contacts, :telephones).find(params[:id])
   end
 
   def new
@@ -21,4 +22,4 @@ class UsersController < ApplicationController
   def destroy
   end
 end
-# 
+
