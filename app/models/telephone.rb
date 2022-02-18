@@ -1,11 +1,7 @@
-class UniqueMainPhone < ActiveModel::Validator
-  def validate(record)
-    first_contact_telephone = Telephone.where(contact_id: record.contact_id).count.zero?
-    if record.principal == true && !first_contact_telephone
-      Telephone.where(principal: true, contact_id: record.contact_id).first.update!(principal: false)
-    end
-  end
+def unique_main_telephone
+  Telephone.where(principal: true, contact_id: contact_id).update_all(principal: false)
 end
+
 
 class Telephone < ApplicationRecord
   belongs_to :contact
@@ -14,6 +10,5 @@ class Telephone < ApplicationRecord
   validates :principal, inclusion: { in: [true, false] }
   validates :number, presence: true, uniqueness: { scope: :contact_id}
 
-  validates_with UniqueMainPhone
+  before_save :unique_main_telephone, if: :principal
 end
-
