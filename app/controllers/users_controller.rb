@@ -4,8 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @contacts = Contact.includes(:telephones)
+    @user = User.includes(:contacts, :telephones).find(params[:id])
   end
 
   def new

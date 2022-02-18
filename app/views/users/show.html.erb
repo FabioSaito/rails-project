@@ -23,10 +23,10 @@
 
         <div class="text__card__users user__relationship">
           <p class="contact__card__header">
-            <%= @contacts.count %> Contatos
+            <%= @user.contacts.count %> Contatos
           </p>
           <ul class="container__contact__card">
-            <% @contacts.each do |contact| %>
+            <% @user.contacts.each do |contact| %>
               <li class="card__user contact__telephone__card">
                 <div class="contact__telephone__header">
                   <p><%= contact.name %></p>
