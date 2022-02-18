@@ -9,7 +9,7 @@
               <%= @user.name %>
             </span>
             <span>
-              <%= @user.age.nil?? "":(@user.age.to_s + " anos") %>
+              <%= @user.age.nil? ? "" : (@user.age.to_s + " anos") %>
             </span>
           </div>
 
