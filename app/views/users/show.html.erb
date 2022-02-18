@@ -9,7 +9,7 @@
               <%= @user.name %>
             </span>
             <span>
-              <%= @user.age %> anos
+              <%= @user.age.nil?? "":(@user.age.to_s + " anos") %>
             </span>
           </div>
 
@@ -23,7 +23,7 @@
 
         <div class="text__card__users user__relationship">
           <p class="contact__card__header">
-            <%= @user.contacts.count %> Contatos
+            <%= @contacts.count %> Contatos
           </p>
           <ul class="container__contact__card">
             <% @contacts.each do |contact| %>

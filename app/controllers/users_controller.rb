@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.includes(:contacts, :telephones).all
   end
 
   def show
     @user = User.find(params[:id])
-    @contacts = @user.contacts.all
+    @contacts = Contact.includes(:telephones)
   end
 
   def new
